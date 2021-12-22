@@ -10,14 +10,15 @@ int compare_char(const void *, const void *);
 
 int compare_char_V(const void *, const void *);
 
-int compare_char(const void *a, const void *b) {
+int compare_char(const void *a, const void *b)
+{
     return strcmp(a, b);
 }
 
 int compare_char_V(const void *a, const void *b)
 {
-    const char *ca = (const char *) a;
-    const char *cb = (const char *) b;
+    const char *ca = (const char *)a;
+    const char *cb = (const char *)b;
 
     if (V_order[*ca - 97] > V_order[*cb - 97])
         return 1;
@@ -25,7 +26,6 @@ int compare_char_V(const void *a, const void *b)
         return 0;
     else
         return -1;
-
 }
 
 int main()
