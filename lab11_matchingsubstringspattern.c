@@ -19,6 +19,10 @@ int freq = 1;
 
 int compare_char(const void *, const void *);
 
+int compare_char(const void *a, const void *b) {
+    return strcmp(a, b);
+}
+
 int main()
 {
     int t_alpha[27] = {0};
